@@ -26,6 +26,6 @@ def FAST_n_BRIEF(img1, img2, n=1000, threshold=40):
     matches = sorted(matches, key = lambda x:x.distance)
     print(len(matches))
     result = cv2.drawMatches(mark1,kp1,mark2,kp2,matches[:min(n, len(matches))],None,matchColor=[0,255,0], flags=2)
-    cv2.imwrite("das.png",result)
+    cv2.imwrite("output.png",result)
 
-FAST_n_BRIEF('../output/template.jpg', '../input/DSC_4944.JPG')
+FAST_n_BRIEF('../output/template.jpg', 'input.JPG')
